@@ -1,0 +1,30 @@
+.rood {
+    color: #FF3333;
+    font-size: 20px; 
+}
+
+.cyan {
+    color: #33FFFC;
+    font-size: 25px;
+}
+
+.groen {
+    color: #6BFF33;
+    font-size: 30px;
+}
+
+.blauw {
+    color: #3386FF;
+    font-size: 35px;
+}
+
+.wit {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+body{
+    background-color: #2d2d2d;
+    text-align: center;
+}
+
