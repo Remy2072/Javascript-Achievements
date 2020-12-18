@@ -4,7 +4,7 @@ Turtle= function(canvas){
     this.y= 0;
     this.angleInRadians= 0;
     this.penDown= false;
-    this.penColor= "#000000";
+    this.penColor= "#FFFFFF";
     this.lineWidth =  2;
     this.ct = canvas.getContext("2d");
     console.log(this.ct);
