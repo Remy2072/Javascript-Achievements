@@ -10,13 +10,24 @@ let counter = 0; // aantal mutliple choice vragen
 let quiz; // object met quiz vragen
 let playerData = {}; // object, hierin worden de game gegevens opgeslagen
 
+
+let quizNummer = 0;
+
 function init(){
-    quiz = quiz1; // kies de quiz
-    //quiz = quiz2; // kies de quiz
+    quizNummer += 1;
+    if(quizNummer == 1){
+      quiz = quiz1; // kies de quiz
+    }
+    if(quizNummer == 2){
+      quiz = quiz2; // kies de quiz
+    }
     initQuiz(); // start de quiz
 }
 
 function initQuiz(){
+  questionBox.style.display = "block"; // reset alle player game variabelen
+  resultBox.style.display = "none"; // reset alle player game variabelen
+  counter = 0; // reset alle player game variabelen
   playerData.goodAnswers = 0; // reset alle player game variabelen
   playerData.wrongAnswers = 0; // reset alle player game variabelen
   playerName = ""; // toekomstige uitbreiding naam speler opvragen
@@ -78,10 +89,31 @@ function finishQuiz() {
   // afsluiting quiz geef feedback
   questionBox.style.display = "none";
   resultBox.style.display = "block";
-  quizWrapper.style.background = "#2d2d2d";
-  resultBox.innerHTML = '<div class="hoi"><h2> Dit kunstwerk ben jij, wil je het kunstwerk in het echt zien kom dan naar het LAM! </h2> <img src="Rembrandt-scaled.jpg" alt="Rembrandt"/></div>';
-
-
+  quizWrapper.style.background = "silver";
+  setTimeout(() => {  console.log("Next Quiz"); }, 2000);
+  if(quizNummer == 2){
+    resultBox.innerHTML = '<div class="hoi"><h2> Dit kunstwerk ben jij, wil je het kunstwerk in het echt zien kom dan naar het LAM! </h2> <img src="Rembrandt-scaled.jpg" alt="Rembrandt"/></div>';
+  }
+  else {
+    init()
+  }
 }
 
 init(); // start it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
